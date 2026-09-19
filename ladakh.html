@@ -1,0 +1,5389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ladakh Tourism</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="bootstrap-1/css/bootstrap.min.css">
+
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Navbar */
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.custom-navbar {
+    height: 65px;
+    background:transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+    
+}
+
+.navbar-container {
+    height: 65px;
+    padding: 0 65px;
+}
+
+.logo-text img {
+    width: 80px;
+    filter: brightness(0) invert(1);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 auto !important;
+}
+
+.navigation .nav-link {
+    color: white !important;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 0 !important;
+    white-space: nowrap;
+}
+
+
+
+.login-btn {
+    color: white;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+
+/* Hero */
+
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.48);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.journey-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    border-radius: 30px;
+    background: #d8ad3d;
+    color: #123b63;
+    text-decoration: none;
+    
+}
+
+.journey-btn:hover {
+    background: #e7bf50;
+    color: #123b63;
+}
+
+
+/* Chat */
+
+.chat-button {
+    position: fixed;
+    left: 32px;
+    bottom: 25px;
+    width: 62px;
+    height: 62px;
+    border: 0;
+    border-radius: 50%;
+    background: #d8ad3d;
+    color: white;
+    font-size: 24px;
+    z-index: 20;
+}
+/* ================= DISCOVER ================= */
+
+
+
+.discover-section {
+    padding: 80px 0 30px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.discover-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.discover-heading h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #111;
+}
+
+.discover-heading p {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #666;
+}
+
+
+/* ================= OWL CAROUSEL ================= */
+
+.discover-carousel {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.discover-carousel .owl-stage {
+    display: flex;
+}
+
+.discover-carousel .owl-item {
+    padding: 0 7px;
+}
+
+
+/* ================= CARD ================= */
+
+.discover-card {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    overflow: hidden;
+    border-radius: 17px;
+    border-bottom: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s ease;
+}
+
+
+/* ================= OVERLAY ================= */
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 35%,
+        rgba(0,0,0,.75) 100%
+    );
+}
+
+
+/* ================= CONTENT ================= */
+
+.discover-content {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    z-index: 3;
+}
+
+.discover-content p {
+    max-width: 260px;
+    margin: 0 auto 14px;
+
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+
+    text-shadow: 0 1px 4px #000;
+}
+
+
+/* ================= BUTTON ================= */
+
+.category-btn {
+    border: 0;
+    border-radius: 6px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #111;
+
+    cursor: pointer;
+}
+
+
+/* ================= HOVER ================= */
+
+.discover-card img {
+    transition: .5s ease;
+}
+
+.discover-card:hover img {
+    transform: scale(1.07);
+}
+
+.discover-card::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50%;
+
+    opacity: 0;
+
+    transition: .4s ease;
+
+    z-index: 2;
+}
+
+.discover-card:hover::after {
+    opacity: 1;
+}
+
+
+/* Hover colors */
+
+.culture-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(233,155,85,.70)
+    );
+}
+
+.landscape-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(92,174,216,.70)
+    );
+}
+
+.heritage-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(154,101,187,.70)
+    );
+}
+
+.adventure-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(75,170,200,.70)
+    );
+}
+
+.wildlife-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(91,189,112,.70)
+    );
+}
+
+.astro-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(102,105,196,.70)
+    );
+}
+
+
+/* ================= CATEGORY COLORS ================= */
+
+.culture-btn {
+    background: #e99b55;
+}
+
+.landscape-btn {
+    background: #5caed8;
+}
+
+.heritage-btn {
+    background: #9a65bb;
+}
+
+.adventure-btn {
+    background: #4baac8;
+}
+
+.wildlife-btn {
+    background: #5bbd70;
+}
+
+.astro-btn {
+    background: #6669c4;
+}
+
+
+/* ================= ARROWS ================= */
+
+.discover-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 48px;
+}
+
+.slider-arrow {
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid #ddd;
+    border-radius: 50%;
+
+    background: #fff;
+    color: #222;
+
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.slider-arrow:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* Hide Owl default controls */
+
+.discover-carousel .owl-nav,
+.discover-carousel .owl-dots {
+    display: none;
+}
+
+
+/*SERVICES SECTION*/
+
+
+.services-section {
+    width: 100%;
+    background: #fff;
+    padding: 45px 32px 35px;
+}
+
+
+/* Heading */
+
+.services-heading {
+    margin-bottom: 55px;
+}
+
+.services-heading h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.services-heading h2 strong {
+    font-weight: 700;
+}
+
+.services-heading h2 span {
+    font-weight: 400;
+    color: #555;
+}
+
+.services-heading p {
+    color: #777;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* Main row */
+
+.services-row {
+    min-height: 390px;
+}
+
+
+/* SERVICES LEFT CONTENT */
+
+.services-content {
+    padding-right: 35px;
+}
+
+.services-content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.services-content h6 {
+    color: #777;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.services-content p {
+    max-width: 540px;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 30px;
+}
+
+
+/* SERVICE ARROWS
+*/
+
+.service-arrows {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.service-arrow {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d5aa38;
+    border-radius: 50%;
+    background: white;
+    color: #d5aa38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-arrow:hover {
+    background: #d5aa38;
+    color: white;
+}
+
+
+/* COUNTER*/
+
+.service-counter {
+    margin-top: 65px;
+    display: flex;
+    align-items: baseline;
+}
+
+.service-counter span {
+    font-size: 30px;
+    color: #555;
+    font-weight: 400;
+}
+
+.service-counter small {
+    font-size: 14px;
+    color: #888;
+    margin-left: 3px;
+}
+
+
+/* SERVICES IMAGES*/
+
+.service-images {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    height: 345px;
+    overflow: hidden;
+}
+
+
+/* Main image */
+
+.service-main-image {
+    width: 62%;
+    height: 100%;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.service-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Small images */
+
+.service-small-image {
+    width: 19%;
+    height: 100%;
+    border-radius: 13px;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.service-small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* HERITAGE SECTION*/
+
+.heritage-section {
+    width: 100%;
+    background: #fff;
+    margin-top: 20px;
+}
+
+
+/* HERITAGE VIDEO*/
+
+.heritage-video {
+    width: 100%;
+    height: 495px;
+    background: #000;
+    overflow: hidden;
+}
+
+.heritage-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.heritage-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* HERITAGE CONTENT*/
+
+.heritage-content {
+    padding: 50px 8%;
+    max-width: 700px;
+}
+
+.heritage-label {
+    color: #16847a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.heritage-content h2 {
+    color: #1f467c;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.heritage-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+
+/* HERITAGE BUTTON*/
+
+.heritage-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    min-width: 280px;
+
+    padding: 17px 25px;
+
+    background: #214879;
+    color: white;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.heritage-btn:hover {
+    background: #17385f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.heritage-btn i {
+    font-size: 18px;
+}
+
+
+/* HERITAGE COUNTER*/
+
+.heritage-count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    margin-top: 22px;
+    padding: 13px 18px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 30px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    font-size: 14px;
+}
+
+.count-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #16847a;
+}
+
+.heritage-count strong {
+    color: #444;
+}
+
+.heritage-count span:last-child {
+    color: #777;
+}
+
+
+/*FLOATING BUTTON*/
+
+.floating-button {
+    position: fixed;
+
+    left: 32px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d5ad3e;
+    color: white;
+
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 999;
+}
+
+.floating-button:hover {
+    transform: scale(1.05);
+}
+
+/* HERITAGE GALLERY*/
+
+.heritage-gallery {
+    width: 100%;
+    background: #fff;
+    padding: 35px 10px 20px;
+    overflow: hidden;
+}
+
+.heritage-gallery-wrapper {
+    display: flex;
+    gap: 18px;
+
+    width: max-content;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 15px;
+
+    scrollbar-width: auto;
+}
+
+
+
+
+.heritage-gallery-wrapper::-webkit-scrollbar {
+    height: 10px;
+}
+
+.heritage-gallery-wrapper::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.heritage-gallery-wrapper::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+}
+
+
+/* HERITAGE GALLERY CARD*/
+
+.heritage-card {
+    width: 325px;
+    flex-shrink: 0;
+}
+
+.heritage-card img {
+    width: 100%;
+    height: 212px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 12px;
+}
+
+.heritage-card p {
+    margin-top: 14px;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    color: #333;
+
+    white-space: nowrap;
+}
+
+
+/* STATISTICS SECTION */
+
+.heritage-statistics {
+    width: 100%;
+    background: #f4f7fb;
+
+    padding: 45px 30px 50px;
+}
+
+.statistics-container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 25px;
+}
+
+
+/* STAT ITEM*/
+
+.stat-item {
+    flex: 1;
+
+    min-width: 100px;
+
+    text-align: center;
+}
+
+
+/* ICON*/
+
+.stat-icon {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5px;
+
+    color: #8c6447;
+
+    font-size: 34px;
+}
+
+
+/* NUMBER*/
+
+.stat-item h3 {
+    margin: 0;
+
+    color: #214879;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+/* LABEl*/
+
+.stat-item p {
+    margin: 8px 0 0;
+
+    color: #53627a;
+
+    font-size: 15px;
+}
+
+
+/*FOOTER */
+
+.heritage-footer {
+    width: 100%;
+
+    min-height: 135px;
+
+    background: #fff;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 25px 40px;
+}
+
+
+/* Left */
+
+.footer-left a {
+    color: #174678;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* Right */
+
+.footer-right {
+    color: #9298a5;
+
+    font-size: 16px;
+}
+
+
+/*FLOATING BUTTON */
+
+.floating-button {
+    position: fixed;
+
+    left: 38px;
+    bottom: 28px;
+
+    width: 65px;
+    height: 65px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d4ae46;
+
+    color: white;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.floating-button:hover {
+    transform: scale(1.08);
+}
+
+/* EXPLORE LADAKH */
+
+.explore-ladakh {
+    width: 100%;
+    min-height: 700px;
+
+    background: #fff;
+
+    padding: 100px 25px 30px;
+
+    overflow: hidden;
+}
+
+
+/*HEADING */
+
+.explore-heading {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.explore-heading h1 {
+    margin: 0;
+
+    color: #2b2b2b;
+
+    font-size: 44px;
+
+    font-weight: 700;
+}
+
+.explore-heading p {
+    margin-top: 15px;
+
+    color: #7b7f84;
+
+    font-size: 17px;
+}
+
+
+/* MAIN CONTAINER */
+
+.explore-container {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+
+/*MAP AREA */
+
+.ladakh-map-area {
+    position: relative;
+
+    width: calc(100% - 410px);
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.ladakh-map {
+    width: 90%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* MAP MARKERS */
+
+.map-marker {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    border: 2px solid white;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.map-marker i {
+    color: white;
+}
+
+
+/* Green markers */
+
+.marker-1,
+.marker-2,
+.marker-4 {
+    background: #17865e;
+}
+
+
+/* Red markers */
+
+.marker-3,
+.marker-5 {
+    background: #e83d48;
+}
+
+
+/* Yellow markers */
+
+.marker-6 {
+    background: #d7b544;
+}
+
+
+/* Blue marker */
+
+.marker-7 {
+    background: #293fa0;
+}
+
+
+/* Marker positions */
+
+.marker-1 {
+    top: 61%;
+    left: 53%;
+}
+
+.marker-2 {
+    top: 67%;
+    left: 59%;
+}
+
+.marker-3 {
+    top: 69%;
+    left: 63%;
+}
+
+.marker-4 {
+    top: 72%;
+    left: 57%;
+}
+
+.marker-5 {
+    top: 76%;
+    left: 66%;
+}
+
+.marker-6 {
+    top: 65%;
+    left: 62%;
+}
+
+.marker-7 {
+    top: 82%;
+    left: 73%;
+}
+
+
+/* RIGHT SIDEBAR */
+
+.explore-sidebar {
+    width: 345px;
+
+    height: 465px;
+
+    overflow-y: auto;
+
+    padding-right: 5px;
+}
+
+
+/* Scrollbar */
+
+.explore-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.explore-sidebar::-webkit-scrollbar-track {
+    background: #eee;
+
+    border-radius: 10px;
+}
+
+.explore-sidebar::-webkit-scrollbar-thumb {
+    background: #999;
+
+    border-radius: 10px;
+}
+
+
+/* EXPLORE CARD*/
+.explore-card {
+    width: 100%;
+
+    background: #fafafa;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+
+    padding: 14px;
+
+    margin-bottom: 13px;
+}
+
+
+/*CARD TITLE */
+
+.explore-card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    font-size: 15px;
+}
+
+.explore-card-title strong {
+    font-size: 15px;
+
+    color: #202020;
+}
+
+.site-count {
+    color: #16865e;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* CATEGORY ICON */
+
+.category-icon {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 10px;
+}
+
+.lake-icon {
+    background: #293fa0;
+}
+
+.monastery-icon {
+    background: #13865c;
+}
+
+
+/* SITE */
+
+.explore-site {
+    display: flex;
+
+    gap: 9px;
+
+    margin-bottom: 8px;
+}
+
+.explore-site img {
+    width: 55px;
+    height: 42px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    flex-shrink: 0;
+}
+
+
+/*SITE DETAILS */
+
+.site-details {
+    min-width: 0;
+}
+
+.site-details h4 {
+    margin: 0 0 3px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+.site-details p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* MORE BUTTON*/
+
+.more-button {
+    width: 27px;
+    height: 27px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    color: #777;
+
+    font-size: 20px;
+
+    line-height: 20px;
+
+    display: block;
+
+    margin: 8px auto 0;
+
+    cursor: pointer;
+}
+
+.more-button:hover {
+    background: #eee;
+}
+.heritage-discover-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(154,101,187,.70)
+    );
+}
+/* DISCOVER HERITAGE BUTTON */
+.discover-card .heritage-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: auto;
+    min-width: 0;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    background: #9a65bb;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.discover-card .heritage-btn:hover {
+    background: #17385f;
+    color: white;
+    transform: translateY(-2px);
+}
+.transform-everyone {
+    position: relative;
+    width: 100%;
+    height: 525px;
+    overflow: hidden;
+}
+
+.transform {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-section__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay */
+.transform::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(75, 35, 25, 0.65),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+/* Content */
+.transform-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 38px;
+    transform: translateY(-50%);
+    color: #fff;
+    width: 650px;
+}
+
+.transform-overlay h2 {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.transform-description {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-top: 24px;
+    margin-bottom: 22px;
+}
+
+/* Statistics */
+.transform-stats {
+    display: flex;
+    align-items: flex-start;
+    gap: 55px;
+}
+
+.stat {
+    min-width: 105px;
+}
+
+.stat h3 {
+    font-size: 29px;
+    font-weight: 500;
+    margin: 0 0 3px;
+    color: #fff;
+}
+
+.stat p {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+}
+/*SIGNATURE DESTINATION SECTION*/
+
+.signature-section {
+    width: 100%;
+    padding: 70px 30px;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+/*HEADING */
+
+.signature-heading {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    z-index: 2;
+}
+
+.signature-heading h2 {
+    margin: 0 0 10px;
+    font-size: 45px;
+    font-weight: 700;
+    color: #222;
+}
+
+.signature-heading p {
+    margin: 0;
+    font-size: 20px;
+    color: #777;
+}
+
+
+/* OWL CAROUSEL */
+
+.signature-carousel {
+    width: 100%;
+    position: relative;
+}
+
+.signature-carousel .owl-stage {
+    display: flex;
+}
+
+.signature-carousel .owl-item {
+    display: flex;
+}
+
+.signature-carousel .owl-stage-outer {
+    overflow: hidden;
+}
+
+
+/* SIGNATURE CARD */
+
+.signature-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    background: #ddd;
+}
+
+.signature-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+/* Image hover */
+
+.signature-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* DARK OVERLAY */
+
+.signature-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.05)
+    );
+    z-index: 1;
+}
+
+
+/* CONTENT */
+
+.signature-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 65px;
+    z-index: 2;
+    text-align: center;
+}
+
+.signature-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+
+/*CATEGORY BUTTON */
+
+.category-btn {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 18px;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Different button colors */
+
+.pangong-btn {
+    background: #4da9dc;
+}
+
+.sand-btn {
+    background: #d5a52e;
+}
+
+.turtuk-btn {
+    background: #45a76a;
+}
+
+.umling-btn {
+    background: #7044a8;
+}
+
+.hemis-btn {
+    background: #a95b2c;
+}
+
+
+/*OWL NAVIGATIOn*/
+
+.signature-carousel .owl-nav {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.signature-carousel .owl-nav button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50% !important;
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    margin: 0 6px !important;
+}
+
+.signature-carousel .owl-nav button span {
+    font-size: 30px;
+    line-height: 1;
+}
+.leh-btn {
+    background: #3b7db5;
+}
+
+.nubra-btn {
+    background: #c78b32;
+}
+
+.magnetic-btn {
+    background: #536d8a;
+}
+
+.thiksey-btn {
+    background: #8b5a9e;
+}
+
+.zanskar-btn {
+    background: #3d8b7a;
+}
+
+.lamayuru-btn {
+    background: #b66a35;
+}
+
+/* ================= SIGNATURE CARD GRADIENT ================= */
+
+.pangong-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(77, 169, 220, 0.70)
+    );
+}
+
+.sand-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(213, 165, 46, 0.70)
+    );
+}
+
+.turtuk-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(69, 167, 106, 0.70)
+    );
+}
+
+.umling-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(112, 68, 168, 0.70)
+    );
+}
+
+.hemis-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(169, 91, 44, 0.70)
+    );
+}
+
+.leh-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(59, 125, 181, 0.70)
+    );
+}
+
+.nubra-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(199, 139, 50, 0.70)
+    );
+}
+
+.magnetic-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(83, 109, 138, 0.70)
+    );
+}
+
+.thiksey-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(139, 90, 158, 0.70)
+    );
+}
+
+.zanskar-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(61, 139, 122, 0.70)
+    );
+}
+
+.lamayuru-card::after {
+    background: linear-gradient(
+        transparent,
+        rgba(182, 106, 53, 0.70)
+    );
+}
+/* ================= GRADIENT OVERLAY ================= */
+
+.signature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.signature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+.signature-card:hover::after {
+    opacity: 1;
+}
+
+
+/*
+   GLIMPSES SECTION
+*/
+
+.glimpses-section {
+    width: 100%;
+
+    padding: 55px 0 70px;
+
+    background: #fff;
+}
+
+
+/* Heading */
+
+.glimpses-heading {
+    margin-bottom: 30px;
+}
+
+.glimpses-heading h2 {
+    margin-bottom: 10px;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    color: #25282b;
+}
+
+.glimpses-heading p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* Category buttons */
+
+.glimpses-tabs {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 38px;
+
+    margin-bottom: 18px;
+
+    flex-wrap: wrap;
+}
+
+.glimpse-tab {
+    min-width: 125px;
+
+    padding: 13px 28px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 30px;
+
+    background: #f7f7f7;
+
+    color: #284766;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.glimpse-tab:hover,
+.glimpse-tab.active {
+    background: #20466e;
+
+    color: #fff;
+
+    border-color: #20466e;
+
+    transform: translateY(-2px);
+}
+
+
+/* Gallery */
+
+.glimpse-gallery {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    grid-template-rows:
+        215px 215px;
+
+    gap: 10px;
+
+    max-width: 1035px;
+
+    margin: 0 auto 18px;
+}
+
+
+/* Gallery items */
+
+.glimpse-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.glimpse-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.5s ease;
+}
+
+
+/* Large image */
+
+.glimpse-large {
+    grid-row: span 2;
+}
+
+
+/* Gradient */
+
+.glimpse-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.45),
+            transparent 60%
+        );
+
+    opacity: 0;
+
+    transition: 0.5s ease;
+}
+
+
+/* Hover */
+
+.glimpse-item:hover img {
+    transform: scale(1.08);
+}
+
+.glimpse-item:hover .glimpse-overlay {
+    opacity: 1;
+}
+
+
+/* Show more */
+
+.show-more-btn {
+    min-width: 160px;
+
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #d5a72e;
+
+    color: #173d60;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.show-more-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/*
+   VIDEO SECTION */
+
+.ladakh-video-section {
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    height: 680px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.ladakh-video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Video overlay */
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    transition: 0.5s ease;
+}
+
+.video-wrapper:hover .video-overlay {
+    background:
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* Play button */
+
+.video-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 86px;
+    height: 86px;
+
+    border-radius: 50%;
+
+    border: 2px solid #fff;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    color: #fff;
+
+    font-size: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    transition: 0.35s ease;
+}
+
+.video-play i {
+    margin-left: 5px;
+}
+
+.video-play:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* Video arrows */
+
+.video-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(20, 65, 100, 0.75);
+
+    color: #fff;
+
+    font-size: 22px;
+
+    z-index: 3;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.video-arrow:hover {
+    background: #164b76;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+.video-prev {
+    left: 15px;
+}
+
+.video-next {
+    right: 15px;
+}
+
+/* =========================================
+   EVENTS SECTION
+========================================= */
+
+.events-section {
+    width: 100%;
+    padding: 20px 38px 35px;
+    background: #ffffff;
+}
+
+.events-row {
+    margin: 0;
+}
+
+.events-col {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    margin-bottom: 18px;
+
+    cursor: pointer;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   CARD HEIGHTS
+========================================= */
+
+/* First row */
+
+.event-monastic {
+    height: 390px;
+}
+
+.event-apricot {
+    height: 235px;
+}
+
+.event-astro {
+    height: 390px;
+}
+
+
+/* Second row */
+
+.event-changthang {
+    height: 275px;
+}
+
+.event-suru {
+    height: 390px;
+}
+
+.event-zanskar {
+    height: 275px;
+}
+
+
+/* Third row */
+
+.event-ladakh {
+    height: 375px;
+}
+
+.event-film {
+    height: 410px;
+}
+
+.event-bike {
+    height: 375px;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.event-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   INDIVIDUAL COLORS
+========================================= */
+
+.event-monastic::after {
+    background: linear-gradient(
+        to top,
+        rgba(55, 45, 170, 0.90),
+        rgba(55, 45, 170, 0.10) 75%
+    );
+}
+
+.event-apricot::after {
+    background: linear-gradient(
+        to top,
+        rgba(205, 155, 25, 0.85),
+        rgba(205, 155, 25, 0.05) 75%
+    );
+}
+
+.event-astro::after {
+    background: linear-gradient(
+        to top,
+        rgba(20, 145, 100, 0.88),
+        rgba(20, 145, 100, 0.05) 75%
+    );
+}
+
+.event-changthang::after {
+    background: linear-gradient(
+        to top,
+        rgba(190, 165, 25, 0.88),
+        rgba(190, 165, 25, 0.05) 75%
+    );
+}
+
+.event-suru::after {
+    background: linear-gradient(
+        to top,
+        rgba(20, 130, 200, 0.88),
+        rgba(20, 130, 200, 0.05) 75%
+    );
+}
+
+.event-zanskar::after {
+    background: linear-gradient(
+        to top,
+        rgba(180, 45, 45, 0.88),
+        rgba(180, 45, 45, 0.05) 75%
+    );
+}
+
+.event-ladakh::after {
+    background: linear-gradient(
+        to top,
+        rgba(135, 45, 175, 0.88),
+        rgba(135, 45, 175, 0.05) 75%
+    );
+}
+
+.event-film::after {
+    background: linear-gradient(
+        to top,
+        rgba(55, 65, 155, 0.92),
+        rgba(55, 65, 155, 0.10) 75%
+    );
+}
+
+.event-bike::after {
+    background: linear-gradient(
+        to top,
+        rgba(20, 155, 140, 0.90),
+        rgba(20, 155, 140, 0.05) 75%
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.event-content {
+    position: absolute;
+
+    left: 35px;
+    right: 25px;
+    bottom: 22px;
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.event-content h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.event-details {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 10px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.event-details span {
+    white-space: nowrap;
+}
+
+.event-content p {
+    margin: 12px 0 0;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+/* Film card content */
+
+.film-content {
+    left: 25px;
+    right: 25px;
+    bottom: 35px;
+
+    text-align: center;
+}
+
+.film-content h3 {
+    font-size: 24px;
+}
+
+
+/* FOOTER  */
+
+.ladakh-footer {
+    position: relative;
+    min-height: 365px;
+
+    background-image: url("	https://tourism.ladakh.gov.in/images/footer-bg.png");
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* DARK OVERLAY */
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 25, 34, 0.78);
+
+    z-index: 1;
+}
+
+
+/* FOOTER CONTENT */
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 75px;
+    padding-bottom: 55px;
+}
+
+
+/* COMMON */
+
+.ladakh-footer h3 {
+    font-size: 19px;
+    font-weight: 700;
+
+    margin-bottom: 28px;
+
+    color: #ffffff;
+}
+
+
+/*  ABOUT  */
+
+.footer-about {
+    text-align: center;
+    padding-right: 45px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.footer-about h2 {
+    font-size: 30px;
+    font-weight: 400;
+
+    margin: 0 0 25px;
+}
+
+.footer-about p {
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/*  LINKS  */
+
+.footer-links {
+    padding-left: 15px;
+}
+
+.footer-links a {
+    display: block;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    margin-bottom: 16px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #dddddd;
+    padding-left: 3px;
+}
+
+
+/*  CONTACT  */
+
+.footer-contact {
+    padding-left: 10px;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: flex-start;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    margin-bottom: 20px;
+}
+
+.footer-contact i {
+    font-size: 15px;
+
+    width: 25px;
+    min-width: 25px;
+
+    margin-top: 4px;
+}
+
+
+/* SOCIAL */
+
+.footer-social {
+    padding-left: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+
+   
+
+
+
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.45);
+
+    transform: translateY(-2px);
+}
+
+
+
+
+/* Mobile */
+
+
+@media (max-width: 576px) {
+
+    .custom-navbar {
+        height: 50px;
+        background: transparent;
+        border-bottom: none;
+
+    }
+
+    .navbar-container {
+        height: 40px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position:relative;
+       
+    }
+
+    /* Logo */
+    .logo-text img {
+        width: 70px;
+        height: auto;
+        position:absolute;
+        top:3%;
+    }
+
+    /* Hide desktop navigation */
+    .navigation {
+        display: none;
+    }
+
+    /* LOGIN BUTTON */
+    .login-section {
+        position:absolute;
+        right:18%;
+        /* top:15% */
+    }
+
+    .login-btn {
+        
+        height: 30px;
+        padding: 0 14px;
+        font-size: 16px;
+        color: white !important;
+        
+    }
+
+    /* HAMBURGER */
+    .menu-btn {
+        /* display: block !important; */
+        position: absolute;
+        right:0;
+        top:15%;
+        width: 30px;
+        height: 30px;
+        margin-left: 8px;
+    }
+
+    /* Hero */
+    .hero-section {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px !important;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .journey-btn {
+        width: 275px;
+        max-width: 90%;
+        height: 55px;
+        font-size: 15px;
+    }
+
+    /* Chat */
+    .chat-button {
+        width: 64px;
+        height: 64px;
+        left: 35px;
+        bottom: 25px;
+    }
+
+   /* discover */
+    .discover-section {
+        padding: 50px 0 25px;
+    }
+
+    .discover-heading {
+        margin-bottom: 35px;
+        padding: 0 20px;
+    }
+
+    .discover-heading h1 {
+        font-size: 30px;
+    }
+
+    .discover-heading p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .discover-carousel {
+        padding: 0 20px;
+    }
+
+    .discover-carousel .owl-item {
+        padding: 0 5px;
+    }
+
+    .discover-card {
+        height: 365px;
+    }
+
+    .discover-content p {
+        font-size: 13px;
+    }
+
+    .category-btn {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+    .discover-arrows {
+        margin-top: 30px;
+    }
+
+    .slider-arrow {
+        width: 45px;
+        height: 45px;
+    }
+
+    .services-section {
+        padding: 35px 15px;
+    }
+
+    .services-heading {
+        margin-bottom: 30px;
+    }
+
+    .services-heading h2 {
+        font-size: 25px;
+    }
+
+    .services-heading p {
+        font-size: 14px;
+    }
+
+
+    /* Services content */
+
+    .services-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .services-content h3 {
+        font-size: 25px;
+    }
+
+    .services-content h6 {
+        font-size: 14px;
+    }
+
+    .services-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* Images */
+
+    .service-images {
+        height: 260px;
+        gap: 8px;
+    }
+
+    .service-main-image {
+        width: 70%;
+        border-radius: 10px;
+    }
+
+    .service-small-image {
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .service-small-image:last-child {
+        display: none;
+    }
+
+
+    /* Counter */
+
+    .service-counter {
+        margin-top: 30px;
+    }
+
+
+    /* Heritage */
+
+    .heritage-section {
+        margin-top: 10px;
+    }
+
+    .heritage-video {
+        height: 280px;
+    }
+
+    .heritage-content {
+        padding: 35px 20px;
+    }
+
+    .heritage-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .heritage-content h2 {
+        font-size: 34px;
+    }
+
+    .heritage-content p {
+        font-size: 15px;
+    }
+
+    .heritage-btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+
+    /* Floating button */
+
+    .floating-button {
+        width: 50px;
+        height: 50px;
+
+        left: 18px;
+        bottom: 18px;
+
+        font-size: 20px;
+    }
+
+      /* Gallery */
+
+    .heritage-gallery {
+        padding: 25px 10px 15px;
+    }
+
+    .heritage-gallery-wrapper {
+        gap: 12px;
+    }
+
+    .heritage-card {
+        width: 270px;
+    }
+
+    .heritage-card img {
+        height: 175px;
+        border-radius: 10px;
+    }
+
+    .heritage-card p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+
+    /* Statistics */
+
+    .heritage-statistics {
+        padding: 35px 10px;
+    }
+
+    .statistics-container {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 10px;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .stat-icon {
+        font-size: 28px;
+        height: 40px;
+    }
+
+    .stat-item h3 {
+        font-size: 30px;
+    }
+
+    .stat-item p {
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    .heritage-footer {
+        min-height: 120px;
+
+        padding: 22px 15px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .footer-left a,
+    .footer-right {
+        font-size: 14px;
+    }
+
+
+    /* Floating button */
+
+    .floating-button {
+        width: 52px;
+        height: 52px;
+
+        left: 18px;
+        bottom: 18px;
+
+        font-size: 20px;
+    }
+
+    .explore-ladakh {
+        padding: 50px 15px 30px;
+    }
+
+
+    /* Heading */
+
+    .explore-heading {
+        margin-bottom: 25px;
+    }
+
+    .explore-heading h1 {
+        font-size: 30px;
+    }
+
+    .explore-heading p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* Stack map and sidebar */
+
+    .explore-container {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    /* Map */
+
+    .ladakh-map-area {
+        width: 100%;
+
+        height: 320px;
+    }
+
+    .ladakh-map {
+        width: 100%;
+    }
+
+
+    /* Sidebar */
+
+    .explore-sidebar {
+        width: 100%;
+
+        height: auto;
+
+        overflow: visible;
+
+        padding: 0;
+    }
+
+
+    .explore-card {
+        margin-bottom: 15px;
+    }
+
+
+    /* Markers */
+
+    .map-marker {
+        width: 18px;
+        height: 18px;
+
+        font-size: 8px;
+    }
+     .transform-everyone {
+        height: 600px;
+    }
+
+    .transform-overlay {
+        left: 20px;
+        right: 20px;
+        top: 50%;
+        width: auto;
+    }
+
+    .transform-overlay h2 {
+        font-size: 34px;
+    }
+
+    .transform-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .transform-description br {
+        display: none;
+    }
+
+    .transform-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+
+    .stat p {
+        font-size: 14px;
+    }
+
+    .signature-section {
+        padding: 40px 15px;
+    }
+
+    .signature-heading {
+        margin-bottom: 25px;
+    }
+
+    .signature-heading h2 {
+        font-size: 30px;
+    }
+
+    .signature-heading p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .signature-card {
+        height: 270px;
+        border-radius: 14px;
+    }
+
+    .signature-content {
+        left: 15px;
+        right: 15px;
+        bottom: 62px;
+    }
+
+    .signature-content p {
+        font-size: 14px;
+    }
+
+    .category-btn {
+        font-size: 14px;
+        padding: 9px 15px;
+    }
+
+     
+    /* GLIMPSES */
+
+    .glimpses-section {
+        padding: 45px 15px 55px;
+    }
+
+    .glimpses-heading h2 {
+        font-size: 30px;
+    }
+
+    .glimpses-heading p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .glimpses-tabs {
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .glimpse-tab {
+        min-width: auto;
+
+        padding: 10px 18px;
+
+        font-size: 12px;
+    }
+
+
+    /* Gallery becomes 1 column */
+
+    .glimpse-gallery {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            repeat(5, 220px);
+
+        gap: 10px;
+    }
+
+    .glimpse-large {
+        grid-row: span 1;
+    }
+
+
+    /* VIDEO */
+
+    .video-wrapper {
+        height: 430px;
+    }
+
+    .video-play {
+        width: 65px;
+        height: 65px;
+
+        font-size: 32px;
+    }
+
+    .video-arrow {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+    .events-section {
+        padding: 35px 15px;
+    }
+
+    .events-heading {
+        margin-bottom: 25px;
+    }
+
+    .events-heading h2 {
+        font-size: 30px;
+    }
+
+    .events-heading p {
+        font-size: 15px;
+    }
+
+    .festival-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .festival-column {
+        gap: 15px;
+    }
+
+    .festival-small,
+    .festival-medium,
+    .festival-large {
+        height: 300px;
+    }
+
+    .festival-content {
+        left: 25px;
+        right: 20px;
+        bottom: 25px;
+    }
+
+    .festival-content h3 {
+        font-size: 21px;
+    }
+
+    .festival-details p {
+        font-size: 13px;
+    }
+
+      .ladakh-footer {
+        text-align: left;
+    }
+
+    .footer-content {
+        padding: 45px 25px;
+    }
+
+    .footer-about {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .footer-about h2 {
+        font-size: 26px;
+    }
+
+    .footer-about p {
+        font-size: 14px;
+    }
+
+    .ladakh-footer h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        padding-left: 10px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    
+
+
+
+
+
+}
+
+      </style>
+
+    </head>
+
+    <body>
+
+        <!--HEADER / NAVBAR -->
+
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+                <div class="container-fluid navbar-container">
+
+                    <!-- LOGO -->
+
+                    <a class="navbar-brand logo" href="#">
+
+                        <div class="logo-text">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/images/ladakh-logo.png"
+                                alt="Ladakh Tourism Logo">
+
+                        </div>
+
+                    </a>
+
+                    <!-- MOBILE MENU BUTTON -->
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <!-- NAVIGATION -->
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarMenu">
+
+                        <ul class="navbar-nav navigation">
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link active"
+                                    href="#">
+                                    Home
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link"
+                                    href="#">
+                                    Discover
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link"
+                                    href="#">
+                                    Explore
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link"
+                                    href="#">
+                                    Festivals
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link"
+                                    href="#">
+                                    Advisory
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link"
+                                    href="#">
+                                    Gallery
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- LOGIN -->
+
+                    <div class="login-section">
+
+                        <button
+                            class="login-btn"
+                            type="button">
+
+                            <svg viewBox="64 64 896 896" focusable="false"
+                                data-icon="login" width="1em" height="1em"
+                                fill="currentColor"
+                                aria-hidden="true"><defs><style></style></defs>
+                                <path
+                                    d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 01520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 01270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 010 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z">
+
+                                </path></svg>
+
+                            Login
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <!-- MAIN -->
+
+        <main>
+
+            <!-- HERO SECTION -->
+
+            <section class="hero-section">
+
+                <!-- BACKGROUND VIDEO -->
+
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto">
+
+                    <source
+                        src="https://tourism.ladakh.gov.in/uploads/banner/2026/04/19484558-bd32-4179-b591-366098e07979-hero-video.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+                <!-- DARK OVERLAY -->
+
+                <div class="hero-overlay"></div>
+
+                <!-- HERO CONTENT -->
+
+                <div class="hero-content">
+
+                    <h1>
+                        Ladakh - A confluence of culture,<br>
+                        nature and adventure
+                    </h1>
+
+                    <a
+                        href="#"
+                        class="journey-btn">
+                        PLAN YOUR JOURNEY
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- FLOATING CHAT BUTTON -->
+
+            <button
+                class="chat-button"
+                type="button">
+
+                <svg viewBox="64 64 896 896" focusable="false" data-icon="robot"
+                    width="1em" height="1em" fill="currentColor"
+                    aria-hidden="true"><path
+                        d="M300 328a60 60 0 10120 0 60 60 0 10-120 0zM852 64H172c-17.7 0-32 14.3-32 32v660c0 17.7 14.3 32 32 32h680c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zm-32 660H204V128h616v596zM604 328a60 60 0 10120 0 60 60 0 10-120 0zm250.2 556H169.8c-16.5 0-29.8 14.3-29.8 32v36c0 4.4 3.3 8 7.4 8h729.1c4.1 0 7.4-3.6 7.4-8v-36c.1-17.7-13.2-32-29.7-32zM664 508H360c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"></path></svg>
+
+            </button>
+
+            <!-- Discover Ladakh -->
+
+            <section class="discover-section">
+
+                <div class="container-fluid">
+
+                    <!-- Heading -->
+                    <div class="discover-heading text-center">
+
+                        <h1>Discover Ladakh</h1>
+
+                        <p>
+                            Discover the diverse experiences that make Ladakh
+                            truly
+                            extraordinary
+                        </p>
+
+                    </div>
+
+                    <!-- OWL CAROUSEL -->
+                    <div class="owl-carousel owl-theme discover-carousel">
+
+                        <!-- CARD 1 -->
+                        <div class="discover-card culture-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/spiritual-culture.webp"
+                                alt="Spiritual and Culture">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Ancient monasteries, festivals, and rituals
+                                    keep Ladakh's living traditions vibrant.
+                                </p>
+
+                                <button class="category-btn culture-btn">
+                                    Spiritual &amp; Culture
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="discover-card landscape-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/diverse-landscape.webp"
+                                alt="Diverse Landscape">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    From high-altitude lakes to stark valleys,
+                                    Ladakh's terrain is endlessly dramatic.
+                                </p>
+
+                                <button class="category-btn landscape-btn">
+                                    Diverse Landscape
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="discover-card heritage-discover-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/heritage.webp"
+                                alt="Heritage">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Discover royal palaces, old trade routes,
+                                    and timeless architectural heritage.
+                                </p>
+
+                                <button class="category-btn heritage-btn"
+                                    style=" width: 150px;">
+                                    Heritage
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="discover-card adventure-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/adventure.webp"
+                                alt="Adventure">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Ride epic passes, trek high trails,
+                                    and experience extreme Himalayan adventures.
+                                </p>
+
+                                <button class="category-btn adventure-btn">
+                                    Adventure
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="discover-card wildlife-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/wildlife.webp"
+                                alt="Wildlife">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Spot snow leopards, ibex, and rare mountain
+                                    birds in pristine habitats.
+                                </p>
+
+                                <button class="category-btn wildlife-btn">
+                                    Wildlife
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 6 -->
+                        <div class="discover-card astro-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/astro-tourism.webp"
+                                alt="Astro Tourism">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Observe crystal-clear stars and cosmic
+                                    views from Ladakh's skies.
+                                </p>
+
+                                <button class="category-btn astro-btn">
+                                    Astro Tourism
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 7 -->
+                        <div class="discover-card eco-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/eco-tourism.jpg"
+                                alt="Eco Tourism">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Experience sustainable travel and discover
+                                    Ladakh's beautiful natural environment.
+                                </p>
+
+                                <button class="category-btn eco-btn">
+                                    Eco Tourism
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 8 -->
+                        <div class="discover-card wellness-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/wellness-tourism.jpg"
+                                alt="Wellness Tourism">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Find peace, relaxation and wellness amidst
+                                    Ladakh's serene mountain landscapes.
+                                </p>
+
+                                <button class="category-btn wellness-btn">
+                                    Wellness Tourism
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 9 -->
+                        <div class="discover-card cuisine-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/cuisines-of-ladakh.webp"
+                                alt="Cuisine of Ladakh">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Taste authentic local flavours and discover
+                                    the unique cuisine of Ladakh.
+                                </p>
+
+                                <button class="category-btn cuisine-btn">
+                                    Cuisine
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 10 -->
+                        <div class="discover-card tribes-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/tribes-of-ladakh.jpg"
+                                alt="Tribes of Ladakh">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Discover the rich traditions, communities
+                                    and cultural heritage of Ladakh.
+                                </p>
+
+                                <button class="category-btn tribes-btn">
+                                    Tribes of Ladakh
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 11 -->
+                        <div class="discover-card petroglyph-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/petroglyphs-rockarts.webp"
+                                alt="Petroglyphs and Rock Arts">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Explore ancient petroglyphs and fascinating
+                                    rock art across Ladakh.
+                                </p>
+
+                                <button class="category-btn petroglyph-btn">
+                                    Rock Art
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 12 -->
+                        <div class="discover-card sports-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/sports-in-ladakh.webp"
+                                alt="Sports in Ladakh">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Enjoy exciting outdoor sports and thrilling
+                                    activities in the Himalayas.
+                                </p>
+
+                                <button class="category-btn sports-btn">
+                                    Sports
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 13 -->
+                        <div class="discover-card film-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/film-destination.jpg"
+                                alt="Film Destination">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Discover spectacular landscapes that have
+                                    attracted filmmakers from around the world.
+                                </p>
+
+                                <button class="category-btn film-btn">
+                                    Film Destination
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 14 -->
+                        <div class="discover-card winter-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/defaults/winter-wonderland.jpg"
+                                alt="Winter Wonderland">
+
+                            <div class="card-overlay"></div>
+
+                            <div class="discover-content">
+
+                                <p>
+                                    Experience the magical beauty of Ladakh
+                                    during the winter season.
+                                </p>
+
+                                <button class="category-btn winter-btn">
+                                    Winter Wonderland
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- OWL CONTROLS -->
+                    <div class="discover-arrows">
+
+                        <button class="slider-arrow discover-prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <button class="slider-arrow discover-next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Event SEction -->
+
+            <!-- SERVICES Section -->
+            <section class="services-section">
+
+                <div class="container-fluid">
+
+                    <!-- Section Heading -->
+                    <div class="services-heading text-center">
+                        <h2>
+                            <strong>Services</strong>
+                            <span>(Explore by Categories)</span>
+                        </h2>
+
+                        <p>Browse verified services across Ladakh</p>
+                    </div>
+
+                    <div class="row align-items-center services-row">
+
+                        <!-- LEFT CONTENT -->
+                        <div class="col-lg-4 col-md-5 col-12">
+
+                            <div class="services-content">
+
+                                <h3>Accommodations</h3>
+
+                                <h6>Hotels, Guesthouses & Lodging In Ladakh</h6>
+
+                                <p>
+                                    From cozy, family-run guesthouses tucked
+                                    into traditional
+                                    villages to premium hotels offering modern
+                                    comforts,
+                                    Ladakh provides a wide range of stays for
+                                    every kind of
+                                    traveler. Wake up to panoramic views of
+                                    rugged mountains,
+                                    experience warm local hospitality, and
+                                    immerse yourself
+                                    in the region's unique culture.
+                                </p>
+
+                                <!-- ARROWS -->
+                                <div class="service-arrows">
+
+                                    <button class="service-arrow">
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+
+                                    <button class="service-arrow">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+
+                                </div>
+
+                                <!-- COUNTER -->
+                                <div class="service-counter">
+                                    <span>01</span>
+                                    <small>/03</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT IMAGES -->
+                        <div class="col-lg-8 col-md-7 col-12">
+
+                            <div class="service-images">
+
+                                <!-- Main Image -->
+                                <div class="service-main-image">
+                                    <img
+                                        src="https://tourism.ladakh.gov.in/uploads/services/accommodations.png"
+                                        alt="Accommodation in Ladakh">
+                                </div>
+
+                                <!-- Small Images -->
+                                <div class="service-small-image">
+                                    <img
+                                        src="https://tourism.ladakh.gov.in/uploads/services/homestays.png"
+                                        alt="Ladakh accommodation">
+                                </div>
+
+                                <div class="service-small-image">
+                                    <img
+                                        src="https://tourism.ladakh.gov.in/uploads/services/tour-operators.png"
+                                        alt="Ladakh hotel">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--HERITAGE SECTION  -->
+            <section class="heritage-section">
+
+                <div class="container-fluid">
+
+                    <div class="row g-0 align-items-center">
+
+                        <!-- LEFT VIDEO / IMAGE -->
+                        <div class="col-lg-6 col-md-6 col-12">
+
+                            <div class="heritage-video">
+
+                                <video class="hshow__heroBg"
+                                    src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/ce65e303-905f-4a8a-918d-f98bd5000f96-heritage-compressed-1-1.webm"
+                                    autoplay muted loop playsinline></video>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT CONTENT -->
+                        <div class="col-lg-6 col-md-6 col-12">
+
+                            <div class="heritage-content">
+
+                                <div class="heritage-label">
+                                    CULTURAL INITIATIVE
+                                </div>
+
+                                <h2>Ladakh Heritage</h2>
+
+                                <p>
+                                    Discover the living monasteries, ancient
+                                    forts and
+                                    timeless traditions that shape the cultural
+                                    soul
+                                    of Ladakh.
+                                </p>
+
+                                <a href="#" class="heritage-btn">
+                                    Visit the Heritage Archive
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+
+                                <div class="heritage-count">
+
+                                    <span class="count-dot"></span>
+
+                                    <strong>6,338</strong>
+
+                                    <span>heritage explorers to date</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- heritage gallery -->
+            <section class="heritage-gallery">
+
+                <div class="heritage-gallery-wrapper">
+
+                    <!-- IMAGE 1 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/692c1e6b-5f3d-4af3-a94f-b5b371050a41-tsamlung-chirten-meru-jpg.jpg"
+                            alt="Tsamlung Chorten Miru">
+                        <p>Tsamlung Chorten Miru</p>
+                    </div>
+
+                    <!-- IMAGE 2 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/5c8bd6a4-7464-4f4f-8b69-d3dbc612073d-chamba-stupas-shey-jpg.jpg"
+                            alt="Chamba Stupas, Shey">
+                        <p>Chamba Stupas, Shey</p>
+                    </div>
+
+                    <!-- IMAGE 3 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/dd66712c-7719-4650-b1c2-e87691f05c52-chhorten-nakpo-samad-rochan-jpg.jpg"
+                            alt="Chorten Nakpo">
+                        <p>Chorten nakpo, Samad Rokchan</p>
+                    </div>
+
+                    <!-- IMAGE 4 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/5f7ff439-0387-42e8-ac89-fae8b0396443-whatsapp-image-2026-07-08-at-14-03-03-3.jpg"
+                            alt="Wanla Khar">
+                        <p>Wanla Khar</p>
+                    </div>
+
+                    <!-- IMAGE 5 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/537582b0-35ae-4d46-bab3-d4014f26bc3e-lamaguru-pictographs-chilling-jpg.jpg"
+                            alt="Lamayuru Pictographs">
+                        <p>Lamayuru Pictographs, Chilling</p>
+                    </div>
+
+                    <!-- IMAGE 6 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/61f2973a-f2c0-4d06-aef5-8422d7ed574a-khar-gya.jpg"
+                            alt="Khar Gya">
+                        <p>Khar, Gya</p>
+                    </div>
+
+                    <!-- IMAGE 7 -->
+
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/56042434-63bc-4ead-a9a9-5a31d1b01bf1-tangtse-gonpa-jpg.jpg"
+                            alt="tangste gonpa">
+                        <p>Tangste Gonpa</p>
+                    </div>
+
+                    <!-- IMAGE 8 -->
+                    <div class="heritage-card">
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/ff93094d-1d0e-48be-bc81-35c7dc56f5a4-shiling-kagan-igu-jpg.jpg"
+                            alt="shiling kagan,Igoo">
+                        <p>Shiling Kagan, Igoo</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- heritage statistics -->
+            <section class="heritage-statistics">
+
+                <div class="statistics-container">
+
+                    <!-- STAT 1 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/fcf2b2a0-77db-42fd-afd1-f9b49facd1bc-stupa.png"
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>347</h3>
+                        <p>Stupas</p>
+
+                    </div>
+
+                    <!-- STAT 2 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/e545f744-258e-443c-bfe4-237552fe4b95-monastery.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>84</h3>
+                        <p>Monasteries</p>
+
+                    </div>
+
+                    <!-- STAT 3 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/7e916988-e350-4662-ab54-20474aff088d-ringsum-gonbo.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>141</h3>
+                        <p>Rig Sum Gonbo</p>
+
+                    </div>
+
+                    <!-- STAT 4 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/de78c564-a4b7-4aaf-9894-1967f7b2b4e3-petroglyph-1.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>54</h3>
+                        <p>Petroglyphs</p>
+
+                    </div>
+
+                    <!-- STAT 5 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/fc301dfe-f007-4f0b-b552-b7f3347bfd4a-labrang.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>47</h3>
+                        <p>Chapels</p>
+
+                    </div>
+
+                    <!-- STAT 6 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/3493f4c7-1a34-4a37-aeab-948c9be5cea9-lhato.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>23</h3>
+                        <p>Llato</p>
+
+                    </div>
+
+                    <!-- STAT 7 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/5dc031c0-be7e-44f6-9644-2b179a4b7879-castle.png"
+                                alt
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>5</h3>
+                        <p>Palace Ruins</p>
+
+                    </div>
+
+                    <!-- STAT 8 -->
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/banner/2026/07/3fd6902d-e47f-48d2-b0b1-1c54a1a3b7a0-mosque.png "
+                                height="50px" width="50px">
+                        </div>
+
+                        <h3>2</h3>
+                        <p>Mosques</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- HERITAGE FOOTER -->
+            <footer class="heritage-footer">
+
+                <div class="footer-left">
+                    <a href="#">
+                        heritage.ladakh.gov.in
+                    </a>
+                </div>
+
+                <div class="footer-right">
+                    Department of Tourism, UT Ladakh
+                </div>
+
+            </footer>
+
+            <!-- EXPLORE LADAKH SECTION -->
+
+            <section class="explore-ladakh">
+
+                <!-- TOP TEXT -->
+                <div class="explore-heading">
+
+                    <h1>Explore Ladakh</h1>
+
+                    <p>
+                        Iconic landmarks and hidden gems across the Land of High
+                        Passes
+                    </p>
+
+                </div>
+
+                <!-- MAIN CONTENT -->
+                <div class="explore-container">
+
+                    <!-- ================= MAP ================= -->
+
+                    <div class="ladakh-map-area">
+
+                        <img
+                            src="https://tourism.ladakh.gov.in/uploads/places/ladakh-map.png"
+                            alt="Map of Ladakh"
+                            class="ladakh-map">
+
+                        <!-- MAP MARKERS -->
+
+                        <div class="map-marker marker-1">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <div class="map-marker marker-2">
+                            <i class="bi bi-bank"></i>
+                        </div>
+
+                        <div class="map-marker marker-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div class="map-marker marker-4">
+                            <i class="bi bi-house-fill"></i>
+                        </div>
+
+                        <div class="map-marker marker-5">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div class="map-marker marker-6">
+                            <i class="bi bi-bank"></i>
+                        </div>
+
+                        <div class="map-marker marker-7">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= RIGHT SIDEBAR ================= -->
+
+                    <div class="explore-sidebar">
+
+                        <!-- LAKES CARD -->
+
+                        <div class="explore-card">
+
+                            <div class="explore-card-title">
+
+                                <span class="category-icon lake-icon">
+                                    <i class="bi bi-snow"></i>
+                                </span>
+
+                                <strong>Lakes</strong>
+
+                                <span class="site-count">
+                                    (3 sites)
+                                </span>
+
+                            </div>
+
+                            <!-- SITE 1 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/lakes/pangong-tso.jpg"
+                                    alt="Pangong Tso">
+
+                                <div class="site-details">
+
+                                    <h4>Pangong Tso</h4>
+
+                                    <p>
+                                        Latitude: 33.7530° N
+                                        Longitude: 78.6670° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- SITE 2 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/lakes/tso-kar.jpg"
+                                    alt="Tso Kar">
+
+                                <div class="site-details">
+
+                                    <h4>Tso Kar</h4>
+
+                                    <p>
+                                        Latitude: 33.3000° N
+                                        Longitude: 78.0000° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- SITE 3 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/lakes/tso-moriri.jpg"
+                                    alt="Tso Moriri">
+
+                                <div class="site-details">
+
+                                    <h4>Tso Moriri</h4>
+
+                                    <p>
+                                        Latitude: 32.9000° N
+                                        Longitude: 78.3000° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <button class="more-button">
+                                +
+                            </button>
+
+                        </div>
+
+                        <!-- MONASTERIES CARD -->
+
+                        <div class="explore-card">
+
+                            <div class="explore-card-title">
+
+                                <span class="category-icon monastery-icon">
+                                    <i class="bi bi-house-heart-fill"></i>
+                                </span>
+
+                                <strong>Monasteries</strong>
+
+                                <span class="site-count">
+                                    (3 sites)
+                                </span>
+
+                            </div>
+
+                            <!-- SITE 1 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/monasteries/alchi.jpg"
+                                    alt="Alchi Monastery">
+
+                                <div class="site-details">
+
+                                    <h4>Alchi Monastery</h4>
+
+                                    <p>
+                                        Latitude: 34.1656° N
+                                        Longitude: 77.3136° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- SITE 2 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/monasteries/thiksey.jpg"
+                                    alt="Thiksey Monastery">
+
+                                <div class="site-details">
+
+                                    <h4>Thiksey Monastery</h4>
+
+                                    <p>
+                                        Latitude: 34.0550° N
+                                        Longitude: 77.6670° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- SITE 3 -->
+
+                            <div class="explore-site">
+
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/places/monasteries/hemis.jpg"
+                                    alt="Hemis Monastery">
+
+                                <div class="site-details">
+
+                                    <h4>Hemis Monastery</h4>
+
+                                    <p>
+                                        Latitude: 33.9860° N
+                                        Longitude: 77.7950° E
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <button class="more-button">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- transform section -->
+
+            <section class="transform-everyone">
+                <div class="transform">
+                    <video class="banner-section__video"
+                        src="https://tourism.ladakh.gov.in/uploads/banner/2026/04/d4c4cd23-6712-46cc-a0b1-bad578d7ebd9-banner-video.mp4"
+                        poster="https://tourism.ladakh.gov.in/uploads/banner/2026/04/8b7efd3c-91cf-4df4-a895-98c65d629a20-banner-poster.jpg"
+                        autoplay muted loop playsinline>
+                    </video>
+                </div>
+
+                <div class="transform-overlay">
+
+                    <h2>A Land That Transforms Everyone</h2>
+                    <h2>Who Visits</h2>
+
+                    <p class="transform-description">
+                        Ladakh offers an experience that reshapes your
+                        <br>
+                        perspective. This is not just travel. This is
+                        <br>
+                        transformation.
+                    </p>
+
+                    <div class="transform-stats">
+
+                        <div class="stat">
+                            <h3>4,500M+</h3>
+                            <p>Avg Elevation</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Monasteries</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Years of Heritage</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>High Passes</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Signature Destination Section -->
+
+            <section class="signature-section">
+
+                <div class="container-fluid">
+
+                    <!-- Section Heading -->
+                    <div class="signature-heading text-center">
+                        <h2>Signature Destination</h2>
+                        <p>Discover the iconic landscape of Ladakh</p>
+                    </div>
+
+                    <!-- Owl Carousel -->
+                    <div class="owl-carousel owl-theme signature-carousel">
+
+                        <!-- CARD 1 -->
+                        <div class="signature-card pangong-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/pangong-compressed-1.jpg"
+                                alt="Pangong Lake">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    A shimmering high-altitude lake stretching
+                                    across
+                                    India and China, famed for its ever-changing
+                                    blue hues.
+                                </p>
+                            </div>
+
+                            <button class="category-btn pangong-btn">
+                                Pangong Lake
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="signature-card sand-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/sanddunes-compressed-1.jpg"
+                                alt="Sand Dunes">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    The surreal cold desert sand dunes of Hunder
+                                    in
+                                    Nubra Valley, home to double-humped Bactrian
+                                    camels.
+                                </p>
+                            </div>
+
+                            <button class="category-btn sand-btn">
+                                Sand Dunes
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="signature-card turtuk-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/turtuk-compressed-1.jpg"
+                                alt="Turtuk Village">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    A hidden gem near the Line of Control,
+                                    offering
+                                    Balti culture, apricot orchards and
+                                    breathtaking scenery.
+                                </p>
+                            </div>
+
+                            <button class="category-btn turtuk-btn">
+                                Turtuk Village
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="signature-card umling-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/umlingla-compressed-1.jpg"
+                                alt="Umling La">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    The world's highest motorable pass at 19,024
+                                    ft,
+                                    a bucket-list destination for adventurers.
+                                </p>
+                            </div>
+
+                            <button class="category-btn umling-btn">
+                                Umling La
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="signature-card hemis-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/hemis-compressed-1.jpg"
+                                alt="Hemis Monastery">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    The largest and wealthiest monastery in
+                                    Ladakh,
+                                    famous for the annual Hemis Festival.
+                                </p>
+                            </div>
+
+                            <button class="category-btn hemis-btn">
+                                Hemis Monastery
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 6 -->
+                        <div class="signature-card leh-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/thiksay-compressed-1.jpg"
+                                alt="Leh">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    The vibrant heart of Ladakh, surrounded by
+                                    majestic mountains,
+                                    ancient monasteries and beautiful
+                                    landscapes.
+                                </p>
+                            </div>
+
+                            <button class="category-btn leh-btn">
+                                Leh
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 7 -->
+                        <div class="signature-card nubra-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/gonbo-compressed-2.jpg"
+                                alt="Nubra Valley">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    A breathtaking valley known for dramatic
+                                    mountains,
+                                    lush villages and unique high-altitude
+                                    landscapes.
+                                </p>
+                            </div>
+
+                            <button class="category-btn nubra-btn">
+                                Nubra Valley
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 8 -->
+                        <div class="signature-card magnetic-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/drass-compressed-1.jpg"
+                                alt="Magnetic Hill">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    A fascinating attraction near Leh famous for
+                                    its unusual
+                                    optical illusion and spectacular mountain
+                                    surroundings.
+                                </p>
+                            </div>
+
+                            <button class="category-btn magnetic-btn">
+                                Magnetic Hill
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 9 -->
+                        <div class="signature-card thiksey-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/suru-compressed-1.jpg"
+                                alt="Thiksey Monastery">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    An impressive monastery built on a hilltop,
+                                    famous for
+                                    its architecture and panoramic views of the
+                                    Indus Valley.
+                                </p>
+                            </div>
+
+                            <button class="category-btn thiksey-btn">
+                                Thiksey Monastery
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 10 -->
+                        <div class="signature-card zanskar-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/alchi-monastery-1.jpg"
+                                alt="Zanskar Valley">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    A remote Himalayan valley surrounded by
+                                    rugged mountains,
+                                    dramatic gorges and spectacular natural
+                                    scenery.
+                                </p>
+                            </div>
+
+                            <button class="category-btn zanskar-btn">
+                                Zanskar Valley
+                            </button>
+
+                        </div>
+
+                        <!-- CARD 11 -->
+                        <div class="signature-card lamayuru-card">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/destinations/signature/hanle-compressed-1.jpg"
+                                alt="Lamayuru">
+
+                            <div class="overlay"></div>
+
+                            <div class="signature-content">
+                                <p>
+                                    Famous for its moon-like landscape and
+                                    ancient monastery,
+                                    Lamayuru is one of the most scenic places in
+                                    Ladakh.
+                                </p>
+                            </div>
+
+                            <button class="category-btn lamayuru-btn">
+                                Lamayuru
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Glimpse Section -->
+            <section class="glimpses-section">
+
+                <div class="container">
+
+                    <!-- Heading -->
+
+                    <div class="glimpses-heading text-center">
+
+                        <h2>
+                            Glimpses of Ladakh
+                        </h2>
+
+                        <p>
+                            A visual journey through the breathtaking landscapes
+                            of the Land of High Passes
+                        </p>
+
+                    </div>
+
+                    <!-- Categories -->
+
+                    <div class="glimpses-tabs">
+
+                        <button class="glimpse-tab active">
+                            Landscapes
+                        </button>
+
+                        <button class="glimpse-tab">
+                            Bike Trips
+                        </button>
+
+                        <button class="glimpse-tab">
+                            Art &amp; Craft
+                        </button>
+
+                        <button class="glimpse-tab">
+                            Wildlife
+                        </button>
+
+                        <button class="glimpse-tab">
+                            Monasteries
+                        </button>
+
+                        <button class="glimpse-tab">
+                            Winter
+                        </button>
+
+                    </div>
+
+                    <!-- Gallery -->
+
+                    <div class="glimpse-gallery">
+
+                        <!-- LARGE IMAGE -->
+
+                        <div class="glimpse-item glimpse-large">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/gallery/img1.jpg"
+                                alt="Ladakh Landscape">
+
+                            <div class="glimpse-overlay"></div>
+
+                        </div>
+
+                        <!-- TOP MIDDLE -->
+
+                        <div class="glimpse-item">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/gallery/img2.jpg"
+                                alt="Ladakh River">
+
+                            <div class="glimpse-overlay"></div>
+
+                        </div>
+
+                        <!-- TOP RIGHT -->
+
+                        <div class="glimpse-item">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/gallery/img3.jpg"
+                                alt="Ladakh Village">
+
+                            <div class="glimpse-overlay"></div>
+
+                        </div>
+
+                        <!-- BOTTOM MIDDLE -->
+
+                        <div class="glimpse-item">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/gallery/img4.jpg"
+                                alt="Pangong Lake">
+
+                            <div class="glimpse-overlay"></div>
+
+                        </div>
+
+                        <!-- BOTTOM RIGHT -->
+
+                        <div class="glimpse-item">
+
+                            <img
+                                src="https://tourism.ladakh.gov.in/uploads/gallery/img5.jpg"
+                                alt="Ladakh Mountains">
+
+                            <div class="glimpse-overlay"></div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SHOW MORE -->
+
+                    <div class="text-center">
+
+                        <button class="show-more-btn">
+                            Show More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- video Section -->
+
+            <section class="ladakh-video-section">
+
+                <div id="ladakhVideoCarousel"
+                    class="carousel slide video-wrapper"
+                    data-bs-ride="carousel"
+                    data-bs-interval="5000">
+
+                    <!-- CAROUSEL ITEMS -->
+                    <div class="carousel-inner">
+
+                        <!-- VIDEO 1 -->
+                        <div class="carousel-item active">
+                            <video
+                                class="d-block w-100 ladakh-video"
+                                autoplay
+                                muted
+                                loop
+                                playsinline>
+                                <source
+                                    src="https://tourism.ladakh.gov.in/uploads/banner/2026/04/d4c4cd23-6712-46cc-a0b1-bad578d7ebd9-banner-video.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <div class="video-overlay"></div>
+
+                            <button class="video-play" type="button">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- VIDEO 2 -->
+                        <div class="carousel-item">
+                            <video
+                                class="d-block w-100 ladakh-video"
+                                muted
+                                loop
+                                playsinline>
+                                <source
+                                    src="https://tourism.ladakh.gov.in/uploads/banner/2026/04/19484558-bd32-4179-b591-366098e07979-hero-video.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <div class="video-overlay"></div>
+
+                            <button class="video-play" type="button">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- VIDEO 3 -->
+                        <div class="carousel-item">
+                            <video
+                                class="d-block w-100 ladakh-video"
+                                muted
+                                loop
+                                playsinline>
+                                <source
+                                    src="https://tourism.ladakh.gov.in/uploads/banner/2026/04/19484558-bd32-4179-b591-366098e07979-hero-video.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <div class="video-overlay"></div>
+
+                            <button class="video-play" type="button">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- PREVIOUS BUTTON -->
+                    <button
+                        class="carousel-control-prev video-arrow video-prev"
+                        type="button"
+                        data-bs-target="#ladakhVideoCarousel"
+                        data-bs-slide="prev">
+
+                        <i class="bi bi-chevron-left"></i>
+
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <!-- NEXT BUTTON -->
+                    <button
+                        class="carousel-control-next video-arrow video-next"
+                        type="button"
+                        data-bs-target="#ladakhVideoCarousel"
+                        data-bs-slide="next">
+
+                        <i class="bi bi-chevron-right"></i>
+
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- EVENTS & FESTIVALS SECTION -->
+            <section class="events-section">
+                <h1 style="text-align: center;font-weight: bold;">Events and
+                    festival</h1>
+                <p style=" text-align: center;color: gray;">Experience Ladakh's
+                    vibrant
+                    traditions, monastic
+                    celebrations, and cultural heritage.</p>
+                <div class="container-fluid">
+
+                    <div class="row events-row">
+
+                        <!-- ================= COLUMN 1 ================= -->
+                        <div class="col-lg-4 events-col">
+
+                            <div class="event-card event-monastic">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/1.jpg"
+                                    alt="Monastic Festivals of Ladakh">
+
+                                <div class="event-content">
+                                    <h3>Monastic Festivals of Ladakh</h3>
+
+                                </div>
+                            </div>
+
+                            <div class="event-card event-changthang">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/4.jpg"
+                                    alt="Changthang Nomadic Festival">
+
+                                <div class="event-content">
+                                    <h3>Changthang Nomadic Festival</h3>
+                                </div>
+                            </div>
+
+                            <div class="event-card event-ladakh">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/7.jpg"
+                                    alt="Ladakh Festival">
+
+                                <div class="event-content">
+                                    <h3>Ladakh Festival</h3>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ================= COLUMN 2 ================= -->
+                        <div class="col-lg-4 events-col">
+
+                            <div class="event-card event-apricot">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/2.jpg"
+                                    alt="Apricot Blossom Festival">
+
+                                <div class="event-content">
+                                    <h3>Apricot Blossom Festival</h3>
+
+                                    <!-- <div class="event-details">
+                                        <span>📅 April 8 – 16</span>
+                                        <span>📍 Across Apricot Clusters</span>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="event-card event-suru">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/5.jpg"
+                                    alt="Suru Summer Festival">
+
+                                <div class="event-content">
+                                    <h3>Suru Summer Festival</h3>
+                                </div>
+                            </div>
+
+                            <div class="event-card event-film">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/8.jpg"
+                                    alt="Himalayan Film Festival">
+
+                                <div class="event-content film-content">
+
+                                    <h3>Himalayan Film Festival</h3>
+
+                                    <!-- <div class="event-details">
+                                        <span>📅 September 29 – October 1</span>
+                                        <span>📍 Across Ladakh</span>
+                                    </div> -->
+
+                                    <p>
+                                        Bringing Himalayan stories to the screen
+                                        through cinema,
+                                        conversation, and community, showcasing
+                                        films highlighting
+                                        themes of identity, tradition, and
+                                        resilience.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ================= COLUMN 3 ================= -->
+                        <div class="col-lg-4 events-col">
+
+                            <div class="event-card event-astro">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/3.jpg"
+                                    alt="Ladakh Astro Week">
+
+                                <div class="event-content">
+                                    <h3>Ladakh Astro Week</h3>
+
+                                    <!-- <div class="event-details">
+                                        <span>📅 May 20 – 26</span>
+                                        <span>📍 Across Ladakh</span>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="event-card event-zanskar">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/6.jpg"
+                                    alt="Zanskar Festival">
+
+                                <div class="event-content">
+                                    <h3>Zanskar Festival</h3>
+                                </div>
+                            </div>
+
+                            <div class="event-card event-bike">
+                                <img
+                                    src="https://tourism.ladakh.gov.in/uploads/assets/events/9.jpg"
+                                    alt="Ladakh Bike Week">
+
+                                <div class="event-content">
+                                    <h3>Ladakh Bike Week</h3>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="ladakh-footer">
+
+            <div class="footer-overlay"></div>
+
+            <div class="container footer-content">
+
+                <div class="row">
+
+                    <!-- COLUMN 1 : LOGO / ABOUT -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-about">
+
+                        <img
+                            src="https://tourism.ladakh.gov.in/images/ladakh-logo-footer.png"
+                            alt="Ladakh Tourism Logo"
+                            class="footer-logo">
+
+                        <h2>Ladakh Tourism</h2>
+
+                        <p>
+                            Official Tourism Website of the Union Territory of
+                            Ladakh.
+                            <br>
+                            Plan your journey safe, verified & permit-ready.
+                        </p>
+
+                    </div>
+
+                    <!-- COLUMN 2 : QUICK LINKS -->
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-links">
+
+                        <h3>Quick Links</h3>
+
+                        <a href="#">Home</a>
+                        <a href="#">Register</a>
+                        <a href="#">Login</a>
+                        <a href="#">Celebrate Ladakh Dates</a>
+                        <a href="#">Monastic Festival Calendar</a>
+
+                    </div>
+
+                    <!-- COLUMN 3 : LEGAL -->
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-links">
+
+                        <h3>Legal</h3>
+
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Services</a>
+
+                    </div>
+
+                    <!-- COLUMN 4 : CONTACT -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-contact">
+
+                        <h3>Contact</h3>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Directorate Tourism, Ground Floor
+                            Secretariat, Kubbathang, Kargil, Ladakh,
+                            India — 194103
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            Leh — 01982-257788 /
+                            Kargil — 01983-232221
+                        </p>
+
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="col-lg-1 col-md-12 col-sm-12 footer-social">
+
+                        <h3>Follow Us</h3>
+
+                        <div class="social-icons">
+
+                            <a href="#">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js"
+            crossorigin="anonymous"></script>
+
+        <!--BOOTSTRAP JAVASCRIPT-->
+
+        <script src="bootstrap-1/js/bootstrap.bundle.min.js"></script>
+        <!-- Slider JS -->
+        <!-- Bootstrap JS -->
+        <script src="bootstrap-1/js/bootstrap.bundle.min.js"></script>
+
+        <!-- jQuery -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Owl Carousel JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <!-- Discover Owl Carousel -->
+        <script>
+
+    $(document).ready(function () {
+
+        var discoverCarousel = $(".discover-carousel");
+
+        discoverCarousel.owlCarousel({
+
+            loop: true,
+
+            margin: 14,
+
+            nav: false,
+
+            dots: false,
+
+            autoplay: true,
+
+            autoplayTimeout: 4000,
+
+            autoplayHoverPause: true,
+
+            smartSpeed: 800,
+
+            responsive: {
+
+                0: {
+                    items: 1
+                },
+
+                576: {
+                    items: 2
+                },
+
+                768: {
+                    items: 3
+                },
+
+                992: {
+                    items: 4
+                },
+
+                1200: {
+                    items: 5
+                },
+
+                1500: {
+                    items: 5
+                }
+
+            }
+
+        });
+
+
+        /* NEXT BUTTON */
+
+        $(".discover-next").click(function () {
+
+            discoverCarousel.trigger("next.owl.carousel");
+
+        });
+
+
+        /* PREVIOUS BUTTON */
+
+        $(".discover-prev").click(function () {
+
+            discoverCarousel.trigger("prev.owl.carousel");
+
+        });
+
+    });
+
+</script>
+        <script>
+    $(document).ready(function () {
+
+        $(".signature-carousel").owlCarousel({
+
+            loop: false,
+
+            margin: 18,
+
+            nav: true,
+
+            dots: false,
+
+            autoplay: false,
+
+            responsive: {
+
+                0: {
+                    items: 1
+                },
+
+                576: {
+                    items: 2
+                },
+
+                768: {
+                    items: 3
+                },
+
+                1200: {
+                    items: 4
+                }
+
+            }
+
+        });
+
+    });
+</script>
+        <script>
+
+$(document).ready(function () {
+
+
+
+
+    /* =====================================
+       GLIMPSES CATEGORY BUTTON
+    ===================================== */
+
+    $(".glimpse-tab").click(function () {
+
+        $(".glimpse-tab").removeClass("active");
+
+        $(this).addClass("active");
+
+    });
+
+
+
+
+});
+</script>
+
+    </body>
+
+</html>
